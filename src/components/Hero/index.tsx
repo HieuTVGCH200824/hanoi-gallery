@@ -13,14 +13,14 @@ const Hero = () => {
   return (
     <section className="text-[#001ECB] mt-20 px-10 text-center h-[80vh]">
       <div className="flex justify-center flex-col items-center w-full">
-        <h5>
+        <h5 className="font-felix text-lg">
           DI
-          <span className="font-bold"> SẢN</span>
+          <span className="font-extrabold font-spartan"> SẢN</span>
         </h5>
-        <img src={HeroImg} className="mt-10 w-[900px]" alt="" />
-        <div className="flex gap-8 text-4xl items-center justify-center mt-6">
+        <img src={HeroImg} className="mt-10 w-[600px]" alt="" />
+        <div className="flex gap-8 text-6xl font-light items-center justify-center font-spartan mt-6">
           <span>Khám phá</span>
-          <div className="py-5 px-8 rounded-full border italic w-52">
+          <div className="py-5 px-8 rounded-full border italic font-garamond font-medium w-72 whitespace-nowrap">
             <Typewriter
               options={{
                 strings: ["lịch sử", "văn hóa"],
