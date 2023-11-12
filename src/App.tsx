@@ -1,14 +1,12 @@
 import "./App.css";
 import Layout from "./layout";
-import Hero from "./components/Hero";
-import Locations from "./components/Locations";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <>
       <Layout>
-        <Hero />
-        <Locations />
+        <Outlet />
       </Layout>
     </>
   );
