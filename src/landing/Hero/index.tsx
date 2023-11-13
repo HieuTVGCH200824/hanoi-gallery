@@ -1,6 +1,7 @@
 import HeroImg from "../../assets/Hero.png";
-import ButtonImg from "../../assets/menu-button.png";
 import Typewriter from "typewriter-effect";
+import CircleImg from "../../assets/outter-button.png";
+import ArrowImg from "../../assets/inner-button.png";
 
 const Hero = () => {
   function handleClickLocation() {
@@ -11,7 +12,7 @@ const Hero = () => {
   }
 
   return (
-    <section className="text-[#001ECB] mt-20 px-10 text-center h-[80vh]">
+    <section className="text-[#001ECB] mt-20 px-20 text-center max-h-[85vh] h-[85vh]">
       <div className="flex justify-center flex-col items-center w-full">
         <h5 className="font-felix text-lg">
           DI
@@ -32,11 +33,15 @@ const Hero = () => {
           <span>thủ đô</span>
         </div>
       </div>
-      <button
-        onClick={handleClickLocation}
-        className="w-36 animate-bounce flex"
-      >
-        <img src={ButtonImg} alt="" />
+      <button onClick={handleClickLocation} className="w-36 flex mt-8">
+        <div className="relative">
+          <img
+            src={CircleImg}
+            className="absolute animate-[spin_15s_linear_infinite]"
+            alt=""
+          />
+          <img src={ArrowImg} className="" alt="" />
+        </div>
       </button>
     </section>
   );
