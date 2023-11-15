@@ -10,7 +10,7 @@ const pple = [
     name: "Phan Thùy Linh",
   },
   {
-    ava: "/public/hieu-ava.jpg",
+    ava: "/static/hieu-ava.jpg",
     fb: "https://www.facebook.com/htv912/",
     name: "Trần Văn Hiếu",
   },
