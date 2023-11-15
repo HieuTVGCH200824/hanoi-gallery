@@ -80,13 +80,15 @@ const Location = () => {
       </div>
       <p className="mt-20 text-2xl w-1/2">{description}</p>
       <ArrowIcon className="mt-20 w-1/2" />
-      <div
+      {/* <div
         id="img-container"
         className="flex-center"
         style={{ padding: `0 ${padding}px` }}
-      >
+      > */}
+      <div className="max-w-[60vw] aspect-square mx-auto">
         <Model />
-        {/* <div
+      </div>
+      {/* <div
           className="relative h-full z-1"
           style={{
             backgroundImage: `url(${LangBacImg})`,
@@ -97,7 +99,7 @@ const Location = () => {
         >
         
         </div> */}
-      </div>
+      {/* </div> */}
     </section>
   );
 };
