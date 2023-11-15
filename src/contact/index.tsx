@@ -1,11 +1,11 @@
 const pple = [
   {
-    ava: "/public/hand-ava.jpg",
+    ava: "/static/hand-ava.jpg",
     fb: "https://www.facebook.com/mhte.hin007",
     name: "Trần Minh Hạnh",
   },
   {
-    ava: "/public/linh-ava.jpg",
+    ava: "/static/linh-ava.jpg",
     fb: "https://www.facebook.com/linh.phanthuy.399",
     name: "Phan Thùy Linh",
   },
@@ -15,7 +15,7 @@ const pple = [
     name: "Trần Văn Hiếu",
   },
   {
-    ava: "/public/hiep-ava.jpg",
+    ava: "/static/hiep-ava.jpg",
     fb: "https://www.facebook.com/hiepdyu.03",
     name: "Nguyễn Duy Hiệp",
   },
