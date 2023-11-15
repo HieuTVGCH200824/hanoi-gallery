@@ -1,8 +1,10 @@
 import { useParams } from "react-router-dom";
 // import LangBacImg from "../assets/lang-bac.png";
 // import ThapRuaImg from "../assets/thap-rua.jpg";
-import { useEffect, useState } from "react";
-import Model from "../components/Model";
+// import { useEffect, useState } from "react";
+import FirstModel from "../components/Model/first.tsx";
+import SecondModel from "../components/Model/second.tsx";
+// import ThirdModel from "../components/Model/third.tsx";
 
 const locations = [
   {
@@ -43,26 +45,26 @@ const ArrowIcon = ({ className }: { className: string }) => (
 
 const Location = () => {
   const { id } = useParams<{ id: string }>(); // Scrolling image scaling logic
-  const maxScrollFor100 = 250;
-  const maxPadding = 500;
-  const [padding, setPadding] = useState(maxPadding);
+  // const maxScrollFor100 = 250;
+  // const maxPadding = 500;
+  // // const [padding, setPadding] = useState(maxPadding);
 
-  const handleScroll = () => {
-    const scrollY = window.scrollY;
-    const percent =
-      100 -
-      (scrollY >= maxScrollFor100 ? 100 : scrollY / (maxScrollFor100 / 100));
-    const newPadding = maxPadding * (percent / 100);
-    setPadding(newPadding);
-  };
+  // const handleScroll = () => {
+  //   const scrollY = window.scrollY;
+  //   const percent =
+  //     100 -
+  //     (scrollY >= maxScrollFor100 ? 100 : scrollY / (maxScrollFor100 / 100));
+  //   const newPadding = maxPadding * (percent / 100);
+  //   setPadding(newPadding);
+  // };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll, { passive: true });
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []); // Adding an empty dependency array to run the effect only once on mount
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []); // Adding an empty dependency array to run the effect only once on mount
 
   const location = locations.find((loc) => loc.id === id);
 
@@ -80,13 +82,15 @@ const Location = () => {
       </div>
       <p className="mt-20 text-2xl w-1/2">{description}</p>
       <ArrowIcon className="mt-20 w-1/2" />
-      <div
+      {/* <div
         id="img-container"
         className="flex-center"
         style={{ padding: `0 ${padding}px` }}
-      >
-        <Model />
-        {/* <div
+      > */}
+      <div className="max-w-[60vw] aspect-square mx-auto">
+        {id === "01" ? <FirstModel /> : <SecondModel />}
+      </div>
+      {/* <div
           className="relative h-full z-1"
           style={{
             backgroundImage: `url(${LangBacImg})`,
@@ -97,7 +101,7 @@ const Location = () => {
         >
         
         </div> */}
-      </div>
+      {/* </div> */}
     </section>
   );
 };
