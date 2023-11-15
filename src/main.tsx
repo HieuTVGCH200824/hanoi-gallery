@@ -6,6 +6,7 @@ import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Landing from "./landing/index.tsx";
 import About from "./about/index.tsx";
+import Location from "./location/index.tsx";
 
 const router = createBrowserRouter([
   {
@@ -21,8 +22,8 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "/contact",
-        element: <h1>Contact</h1>,
+        path: "/location/:id",
+        element: <Location />,
       },
     ],
   },
