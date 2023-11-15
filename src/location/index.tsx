@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 // import LangBacImg from "../assets/lang-bac.png";
 // import ThapRuaImg from "../assets/thap-rua.jpg";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import Model from "../components/Model";
 
 const locations = [
@@ -43,26 +43,26 @@ const ArrowIcon = ({ className }: { className: string }) => (
 
 const Location = () => {
   const { id } = useParams<{ id: string }>(); // Scrolling image scaling logic
-  const maxScrollFor100 = 250;
-  const maxPadding = 500;
-  const [padding, setPadding] = useState(maxPadding);
+  // const maxScrollFor100 = 250;
+  // const maxPadding = 500;
+  // // const [padding, setPadding] = useState(maxPadding);
 
-  const handleScroll = () => {
-    const scrollY = window.scrollY;
-    const percent =
-      100 -
-      (scrollY >= maxScrollFor100 ? 100 : scrollY / (maxScrollFor100 / 100));
-    const newPadding = maxPadding * (percent / 100);
-    setPadding(newPadding);
-  };
+  // const handleScroll = () => {
+  //   const scrollY = window.scrollY;
+  //   const percent =
+  //     100 -
+  //     (scrollY >= maxScrollFor100 ? 100 : scrollY / (maxScrollFor100 / 100));
+  //   const newPadding = maxPadding * (percent / 100);
+  //   setPadding(newPadding);
+  // };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll, { passive: true });
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []); // Adding an empty dependency array to run the effect only once on mount
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []); // Adding an empty dependency array to run the effect only once on mount
 
   const location = locations.find((loc) => loc.id === id);
 

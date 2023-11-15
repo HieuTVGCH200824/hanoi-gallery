@@ -2,7 +2,7 @@ import { Canvas } from "@react-three/fiber";
 import { useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { useRef } from "react";
-import { OrbitControls, PivotControls } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 
 const Setup = () => {
   const gltf = useLoader(GLTFLoader, "/potiontest.glb");
