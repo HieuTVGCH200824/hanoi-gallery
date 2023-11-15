@@ -2,7 +2,9 @@ import { useParams } from "react-router-dom";
 // import LangBacImg from "../assets/lang-bac.png";
 // import ThapRuaImg from "../assets/thap-rua.jpg";
 // import { useEffect, useState } from "react";
-import Model from "../components/Model";
+import FirstModel from "../components/Model/first.tsx";
+import SecondModel from "../components/Model/second.tsx";
+// import ThirdModel from "../components/Model/third.tsx";
 
 const locations = [
   {
@@ -86,7 +88,7 @@ const Location = () => {
         style={{ padding: `0 ${padding}px` }}
       > */}
       <div className="max-w-[60vw] aspect-square mx-auto">
-        <Model />
+        {id === "01" ? <FirstModel /> : <SecondModel />}
       </div>
       {/* <div
           className="relative h-full z-1"
