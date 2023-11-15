@@ -18,7 +18,7 @@ const Hero = () => {
           DI
           <span className="font-extrabold font-spartan"> SẢN</span>
         </h5>
-        <img src={HeroImg} className="mt-10 w-[600px]" alt="" />
+        <img src={HeroImg} className="mt-10 w-[70vw]" alt="" />
         <div className="flex gap-8 text-6xl font-light items-center justify-center font-spartan mt-6">
           <span>Khám phá</span>
           <div className="py-5 px-8 rounded-full border italic font-garamond font-medium w-72 whitespace-nowrap">

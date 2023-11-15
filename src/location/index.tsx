@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 // import { useEffect, useState } from "react";
 import FirstModel from "../components/Model/first.tsx";
 import SecondModel from "../components/Model/second.tsx";
-// import ThirdModel from "../components/Model/third.tsx";
+import ThirdModel from "../components/Model/third.tsx";
 
 const locations = [
   {
@@ -15,9 +15,9 @@ const locations = [
   },
   {
     id: "02",
-    name: "Cột cờ Hà Nội",
+    name: "Tháp Rùa Hồ Gươm",
     description:
-      "Cột cờ Hà Nội là một cột cờ cao 33,3m, nằm trong khuôn viên Bảo tàng Lịch sử Quân sự Việt Nam. Cột cờ được xây dựng vào thế kỷ 19, là một biểu tượng của tinh thần yêu nước của dân tộc Việt Nam.",
+      "Hồ Gươm là trái tim của Hà Nội, một hồ nước thơ mộng nằm ở trung tâm thành phố. Hồ có nhiều di tích lịch sử nổi tiếng, như đền Ngọc Sơn, tháp Rùa, cầu Thê Húc.",
   },
   {
     id: "03",
@@ -40,6 +40,26 @@ const ArrowIcon = ({ className }: { className: string }) => (
       d="M967.793 161.707C968.183 162.098 968.817 162.098 969.207 161.707L975.571 155.343C975.962 154.953 975.962 154.319 975.571 153.929C975.181 153.538 974.547 153.538 974.157 153.929L968.5 159.586L962.843 153.929C962.453 153.538 961.819 153.538 961.429 153.929C961.038 154.319 961.038 154.953 961.429 155.343L967.793 161.707ZM0 2H919.5V0H0V2ZM967.5 50V161H969.5V50H967.5ZM919.5 2C946.01 2 967.5 23.4903 967.5 50H969.5C969.5 22.3858 947.114 0 919.5 0V2Z"
       fill="#001ECB"
     />
+  </svg>
+);
+
+const NextIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="icon icon-tabler icon-tabler-swimming group-hover:translate-x-20 transition-all ease-in-out duration-500"
+    width="128"
+    height="128"
+    viewBox="0 0 24 24"
+    stroke-width="1"
+    stroke="currentColor"
+    fill="none"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M16 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+    <path d="M6 11l4 -2l3.5 3l-1.5 2" />
+    <path d="M3 16.75a2.4 2.4 0 0 0 1 .25a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 1 -.25" />
   </svg>
 );
 
@@ -80,15 +100,39 @@ const Location = () => {
         <span className="font-modern">{id}</span>
         <span>{name}</span>
       </div>
-      <p className="mt-20 text-2xl w-1/2">{description}</p>
-      <ArrowIcon className="mt-20 w-1/2" />
+      <div className="flex items-center justify-between mb-10">
+        <div className="w-1/2">
+          <p className="mt-20 text-2xl">{description}</p>
+          <ArrowIcon className="mt-20 pr-20" />
+        </div>
+        <a
+          className="-translate-x-20  group"
+          href={
+            id === "01"
+              ? "/location/02"
+              : id === "02"
+              ? "/location/03"
+              : "/location/01"
+          }
+        >
+          <div>
+            <NextIcon />
+          </div>
+        </a>
+      </div>
       {/* <div
         id="img-container"
         className="flex-center"
         style={{ padding: `0 ${padding}px` }}
       > */}
       <div className="max-w-[60vw] aspect-square mx-auto">
-        {id === "01" ? <FirstModel /> : <SecondModel />}
+        {id === "01" ? (
+          <FirstModel />
+        ) : id == "02" ? (
+          <SecondModel />
+        ) : (
+          <ThirdModel />
+        )}
       </div>
       {/* <div
           className="relative h-full z-1"
