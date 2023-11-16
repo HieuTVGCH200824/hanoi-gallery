@@ -24,6 +24,7 @@ export default {
       },
     },
     fontFamily: {
+      beVietnam: ["'Be Vietnam Pro'", "sans-serif"],
       modern: ["'Modern No. 20'", "sans-serif"],
       spartan: ["League Spartan", "sans-serif"],
       felix: ["'Felix Titling'", "sans-serif"],

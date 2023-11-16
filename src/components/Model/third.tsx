@@ -2,7 +2,8 @@ import { Canvas } from "@react-three/fiber";
 import { useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { useRef, Suspense } from "react";
-import { Environment, OrbitControls, Loader } from "@react-three/drei";
+import { Environment, OrbitControls } from "@react-three/drei";
+import LoadingScreen from "../Loading";
 
 const Setup = () => {
   const gltf = useLoader(GLTFLoader, "/chua-mot-cot.glb");
@@ -31,7 +32,7 @@ const Model = () => {
           <Setup />
         </Suspense>
       </Canvas>
-      <Loader />
+      <LoadingScreen />
     </>
   );
 };
