@@ -101,9 +101,9 @@ const Location = () => {
         <span>{name}</span>
       </div>
       <div className="flex items-center justify-between mb-10">
-        <div className="w-1/2">
+        <div className="w-[50vw]">
           <p className="mt-20 text-2xl">{description}</p>
-          <ArrowIcon className="mt-20 pr-20" />
+          <ArrowIcon className="mt-20 pr-20 w-[50vw]" />
         </div>
         <a
           className="-translate-x-20  group"
