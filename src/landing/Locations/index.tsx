@@ -7,7 +7,7 @@ const locations = [
   },
   {
     id: "02",
-    name: "Cột cờ Hà Nội",
+    name: "Tháp Rùa Hồ Gươm",
   },
   {
     id: "03",
@@ -18,7 +18,6 @@ const locations = [
 const Locations = () => {
   return (
     <section className="px-20 text-[#001ECB]" id="location">
-      <h1 className="ml-4 font-playfair font-semibold">địa điểm</h1>
       <ul className="space-y-6 mt-32 mb-52">
         {locations.map((location) => (
           <li key={location.id}>
