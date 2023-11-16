@@ -17,7 +17,7 @@ const locations = [
 
 const Locations = () => {
   return (
-    <section className="px-20 text-[#001ECB]" id="location">
+    <section className="text-[#001ECB]" id="location">
       <ul className="space-y-6 mt-32 mb-52">
         {locations.map((location) => (
           <li key={location.id}>

@@ -4,10 +4,12 @@ const About = () => {
   return (
     <div>
       <section className="text-[#001ECB] mt-20 px-10 text-center h-[80vh]">
-        <h1 className="font-playfair text-9xl">Xin chào!</h1>
-        <div className="flex gap-8 text-6xl font-light items-center justify-center font-spartan mt-6">
+        <h1 className="font-playfair text-4xl lg:text-7xl 2xl:text-9xl">
+          Xin chào!
+        </h1>
+        <div className="flex sm:flex-row flex-col  gap-8 lg:text-4xl text-2xl 2xl:text-6xl font-light items-center justify-center font-spartan mt-6">
           <span>Chúng tớ là</span>
-          <div className="py-5 px-8 rounded-full border italic font-garamond font-medium w-72 whitespace-nowrap">
+          <div className="py-5 px-8 rounded-full border italic font-garamond font-medium  w-40 lg:w-96 whitespace-nowrap">
             <Typewriter
               options={{
                 strings: ["UI/UX", "3d", "graphic"],
@@ -23,7 +25,7 @@ const About = () => {
             Chào mừng các bạn đến với một “siêu phẩm” của nhóm “Bơi về di sản”
             chúng tớ!
           </span>
-          <div className="text-justify space-y-3 mx-40 text-lg mt-10">
+          <div className="text-justify space-y-3 text-lg mt-10">
             <p>
               Cuộc thi “2023 - Bước di sản” là một sân chơi mới mẻ và bổ ích với
               mục đích nhằm quảng bá các di sản của thủ đô Hà Nội qua tài năng

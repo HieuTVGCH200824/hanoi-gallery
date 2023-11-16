@@ -1,7 +1,4 @@
 import { useParams } from "react-router-dom";
-// import LangBacImg from "../assets/lang-bac.png";
-// import ThapRuaImg from "../assets/thap-rua.jpg";
-// import { useEffect, useState } from "react";
 import FirstModel from "../components/Model/first.tsx";
 import SecondModel from "../components/Model/second.tsx";
 import ThirdModel from "../components/Model/third.tsx";
@@ -64,27 +61,7 @@ const NextIcon = () => (
 );
 
 const Location = () => {
-  const { id } = useParams<{ id: string }>(); // Scrolling image scaling logic
-  // const maxScrollFor100 = 250;
-  // const maxPadding = 500;
-  // // const [padding, setPadding] = useState(maxPadding);
-
-  // const handleScroll = () => {
-  //   const scrollY = window.scrollY;
-  //   const percent =
-  //     100 -
-  //     (scrollY >= maxScrollFor100 ? 100 : scrollY / (maxScrollFor100 / 100));
-  //   const newPadding = maxPadding * (percent / 100);
-  //   setPadding(newPadding);
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll, { passive: true });
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []); // Adding an empty dependency array to run the effect only once on mount
+  const { id } = useParams<{ id: string }>();
 
   const location = locations.find((loc) => loc.id === id);
 
@@ -95,18 +72,18 @@ const Location = () => {
   const { name, description } = location;
 
   return (
-    <section className="text-[#001ECB] mt-40 px-20 h-[130vh]">
-      <div className="text-8xl flex gap-10 items-center">
+    <section className="text-[#001ECB] mt-40 h-[130vh]">
+      <div className="text-6xl lg:text-8xl flex gap-10 items-center">
         <span className="font-modern">{id}</span>
         <span>{name}</span>
       </div>
       <div className="flex items-center justify-between mb-10">
-        <div className="w-[50vw]">
-          <p className="mt-20 text-2xl">{description}</p>
-          <ArrowIcon className="mt-20 pr-20 w-[50vw]" />
+        <div className="w-1/2">
+          <p className="mt-20 text-lg sm:text-2xl">{description}</p>
+          <ArrowIcon className="mt-20 w-full" />
         </div>
         <a
-          className="-translate-x-20  group"
+          className="-translate-x-10 sm:-translate-x-20  group"
           href={
             id === "01"
               ? "/location/02"
@@ -120,11 +97,6 @@ const Location = () => {
           </div>
         </a>
       </div>
-      {/* <div
-        id="img-container"
-        className="flex-center"
-        style={{ padding: `0 ${padding}px` }}
-      > */}
       <div className="max-w-[60vw] aspect-square mx-auto">
         {id === "01" ? (
           <FirstModel />
@@ -134,18 +106,6 @@ const Location = () => {
           <ThirdModel />
         )}
       </div>
-      {/* <div
-          className="relative h-full z-1"
-          style={{
-            backgroundImage: `url(${LangBacImg})`,
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-          }}
-        >
-        
-        </div> */}
-      {/* </div> */}
     </section>
   );
 };

@@ -15,9 +15,9 @@ export default {
         },
       },
       backgroundImage: {
-        "lang-bac": "url('/public/lang-bac.png')",
-        "thap-rua": "url('/public/thap-rua.png')",
-        "mot-cot": "url('/public/mot-cot.png')",
+        "lang-bac": "url('/lang-bac.png')",
+        "thap-rua": "url('/thap-rua.png')",
+        "mot-cot": "url('/mot-cot.png')",
       },
       animation: {
         typing: "typing 2.5s steps(30) infinite alternate",
