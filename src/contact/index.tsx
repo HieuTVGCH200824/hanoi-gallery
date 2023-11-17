@@ -38,7 +38,7 @@ const Contact = () => {
             >
               <img src={p.ava} className="rounded-full" alt="" />
             </a>
-            <span className="mt-2">{p.name}</span>
+            <span className="mt-2 text-[#001ECB]">{p.name}</span>
           </div>
         ))}
       </div>
