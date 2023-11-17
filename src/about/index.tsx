@@ -20,24 +20,26 @@ const About = () => {
           </div>
           <span>designer</span>
         </div>
-        <div className="mt-20 text-2xl">
+        <div className="mt-20 text-2xl font-beVietnam">
           <span>
-            Chào mừng các bạn đến với một “siêu phẩm” của nhóm “Bơi về di sản”
-            chúng tớ!
+            Chào mừng các bạn đến với một “siêu phẩm” của nhóm{" "}
+            <span className="font-bold">“Bơi về di sản”</span> chúng tớ!
           </span>
           <div className="text-justify space-y-3 text-lg mt-10">
             <p>
-              Cuộc thi “2023 - Bước di sản” là một sân chơi mới mẻ và bổ ích với
-              mục đích nhằm quảng bá các di sản của thủ đô Hà Nội qua tài năng
-              của các bạn sinh viên. Vì vậy, chúng tớ - những sinh viên năm 3,
-              năm 4 với đặc điểm “không biết bơi”, đã chọn tên gọi "Bơi về di
-              sản" như cách thể hiện mong muốn tìm hiểu, học hỏi, khám phá những
-              giá trị di sản văn hóa của Hà Nội của nhóm chúng tớ.
+              Cuộc thi <strong>“2023 - Bước di sản”</strong> là một sân chơi mới
+              mẻ và bổ ích với mục đích nhằm quảng bá các di sản của thủ đô Hà
+              Nội qua tài năng của các bạn sinh viên. Vì vậy, chúng tớ - những
+              sinh viên năm 3, năm 4 với đặc điểm “không biết bơi”, đã chọn tên
+              gọi <strong> "Bơi về di sản"</strong> như cách thể hiện mong muốn
+              tìm hiểu, học hỏi, khám phá những giá trị di sản văn hóa của Hà
+              Nội của nhóm chúng tớ.
             </p>
             <p>
-              Trong cuộc thi "2023 - Bước di sản", chúng tớ muốn sử dụng những
-              kỹ năng chuyên môn trong ngành học của mình để giới thiệu những
-              giá trị di sản của Hà Nội đến với cộng đồng. Chúng tớ chọn làm 3D
+              Trong cuộc thi <strong> "2023 - Bước di sản" </strong>, chúng tớ
+              muốn sử dụng những kỹ năng chuyên môn trong ngành học của mình để
+              giới thiệu những giá trị di sản của Hà Nội đến với cộng đồng.{" "}
+              <strong>“Bơi về di sản” </strong> chúng tớ đã chọn làm interactive
               website để truyền tải thông tin về các công trình kiến trúc Hà Nội
               một cách sinh động, hấp dẫn.
             </p>
