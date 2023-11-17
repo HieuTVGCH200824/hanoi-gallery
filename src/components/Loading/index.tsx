@@ -5,7 +5,7 @@ const LoadingScreen = () => {
   if (!active) return null;
   return (
     <div className="fixed w-screen h-screen top-0 left-0 z-10 bg-white flex items-center justify-center">
-      <div className="text-9xl">
+      <div className="text-7xl md:text-9xl xl:text-[320px]">
         <span className="font-beVietnam font-semibold">
           {Math.round(progress)}
         </span>

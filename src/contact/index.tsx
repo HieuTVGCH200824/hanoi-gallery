@@ -29,7 +29,7 @@ const Contact = () => {
       </h1>
       <div className="grid grid-cols-4 gap-10 mx-auto mt-20">
         {pple.map((p) => (
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center hover:animate-bounce">
             <a
               href={p.fb}
               target="_blank"
