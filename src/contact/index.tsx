@@ -24,12 +24,12 @@ const pple = [
 const Contact = () => {
   return (
     <div>
-      <h1 className="text-center mt-40 font-playfair text-4xl lg:text-7xl 2xl:text-9xl font-bold text-[#001ECB] px-10">
+      <h1 className="text-center mt-40 font-playfair text-4xl lg:text-7xl 2xl:text-9xl text-[#001ECB] px-10">
         Thành viên
       </h1>
       <div className="grid grid-cols-4 gap-10 mx-auto mt-20">
         {pple.map((p) => (
-          <div className="flex flex-col items-center hover:animate-bounce">
+          <div className="flex flex-col items-center">
             <a
               href={p.fb}
               target="_blank"
